@@ -1,46 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Code Quiz</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="top-row">
+            <p id="highscore"></p> 
+            <p id="timer"></p>  
+        </div>
 
-<head>
-    <meta charset="UTF-8"/>
-    <meta name = "viewport" content="width=device-width, initial-scale =1.0"/>
-    <meta http-equiv="X-UA-cOMPATIBLE" content="ie=edge"/>
-    <title>Coding Quiz!</title>
-    <link rel="stylesheet" href="./assets/style.css">
-
-</head>
-
-<body>
-    <div class="header">
-      <h1 class="title">Coding Quiz Challenge</h1>
-      <h2 class="questions">
-        Try to answer the following code-related questions within the time
-        limit. Keep in mind that incorrect answers will penalize your score/time
-        by five seconds!
-      </h2>
+        <div class="card">
+            <h1 class="header"></h1>
+            <p id="info"></p>
+            <ol></ol> 
+            <div class="message"><h3 id="message"></h3></div> 
+            <div class="highscores"></div>
+            <button type="submit" id="startquiz">Start Quiz</button>
+            <form method="POST">
+              <div class="post-score">
+                <div class="initials">
+                  <label for="initials-input">Enter Initials</label>
+                  <input type="text" name="initials-input" id="initials-input"/>
+                </div>
+                <button type="submit" id="post-score">Submit</button>
+              </div>
+            </form>
+        </div> 
     </div>
-
-    <div class="quiz">
-      <div id="questions"></div>
-
-      <div id="answers"></div>
-    </div>
-
-    <div class="controls">
-      <p>Time Remaining: <span id="countdown">40</span></p>
-      <button class="btn" id="start-quiz">Start Quiz</button>
-    </div>
-
-    <form>
-      <div>score:<span id="score"></span></div>
-
-      <label for="initials"> </label>
-      <input type="text" name="name" id="initials" placeholder="name" />
-      <button id="submit">Submit</button>
-      <ol id="highscores">
-        <span><b>HIGHSCORES</b></span>
-      </ol>
-    </form>
-    <script src="assets/script.js"></script>
+    
+    <script src="./assets/script.js"></script>
   </body>
 </html>
